@@ -1,0 +1,13 @@
+version: '2'
+services:
+    rabbitmq:        
+        build: ./zakh-rabbitmq        
+        ports:
+            - 8080:15672
+            - 5261:5261
+    elasticsearch:
+        build: ./zakh-elasticsearch        
+        ports:
+            - 9200:9200
+volumes:
+    db_path: {}
